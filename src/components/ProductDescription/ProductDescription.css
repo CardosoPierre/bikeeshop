@@ -1,0 +1,23 @@
+.ProductDescription {
+    padding-top: 50px;
+}
+
+.ProductDescription a {
+    color: #555;
+    font-size: 12px;
+}
+
+.ProductDescription .Name {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ProductDescription .Price {
+    font-size: 16px;
+    color : #555;
+}
+
+.ProductDescription .Description {
+    font-size: 12px;
+}
