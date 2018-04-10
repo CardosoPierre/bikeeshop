@@ -5,11 +5,13 @@ import { Button, Col } from "reactstrap";
 const card = (props) => {
 
     return (
-        <Col className="Card">
-            <img src={props.picture} alt="product" />
-            <p>{props.title}</p>
-            <p>{props.price}</p>
-            <Button color="primary">Add to cart</Button>
+        <Col md="4" className="Card">
+            <a href="#">
+                <img src={props.picture} alt="product" />
+                <p>{props.title}</p>
+                <p className="price">{props.price}</p>
+                <Button color="link">Add to cart</Button>
+            </a>
         </Col>
     );
 }
