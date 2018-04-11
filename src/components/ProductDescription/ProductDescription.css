@@ -14,10 +14,26 @@
 }
 
 .ProductDescription .Price {
-    font-size: 16px;
+    font-size: 30px;
     color : #555;
+    font-weight: bold;
 }
 
 .ProductDescription .Description {
     font-size: 12px;
+    text-align: justify;
+}
+
+.ProductDescription .ButtonCart {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .ProductDescription {
+        padding: 50px;
+    }
+
+    .ProductDescription .Price, .Name {
+        text-align: center;
+    }
 }

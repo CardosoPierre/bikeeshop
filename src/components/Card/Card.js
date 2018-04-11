@@ -6,12 +6,12 @@ const card = (props) => {
 
     return (
         <Col md="4" className="Card">
-            <a href="#">
+            <a href="/product/1">
                 <img src={props.picture} alt="product" />
-                <p>{props.title}</p>
-                <p className="price">{props.price}</p>
-                <Button color="link">Add to cart</Button>
             </a>
+            <p>{props.name}</p>
+            <p className="price">{props.price}</p>
+            <a href="/product/1">ADD TO CART</a>
         </Col>
     );
 }

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './Content.css';
-import { Container, Row } from 'reactstrap';
 
+import {Container} from 'reactstrap';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+
+import Products from '../Products/Products';
 import ProductDetail from '../ProductDetail/ProductDetail';
 
 class content extends Component {
-    constructor(props){
-        super(props);
-    }
-
     /*
     componentDidMount() {
         fetch('localhost:8000/article')
@@ -32,9 +31,12 @@ class content extends Component {
         );*/
         return (
             <Container className="Content">
-                <Row>
-                    <ProductDetail/>
-                </Row>
+                <Router>
+                    <div>
+                        <Route exact path="/" component={Products} />
+                        <Route path="/product" component={ProductDetail} />
+                    </div>
+                </Router>
             </Container>
         );
     }

@@ -1,0 +1,12 @@
+.Header {
+    background: white;
+    z-index: 9999;;
+    width: 100%;
+    padding: 20px;
+}
+
+.Header h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color : #555;
+}
