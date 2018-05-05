@@ -1,17 +1,18 @@
 import React from 'react';
 import './Card.css';
-import { Button, Col } from "reactstrap";
+import { Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const card = (props) => {
 
     return (
         <Col md="4" className="Card">
-            <a href="/product/1">
+            <Link to={"product/" + props.id}>
                 <img src={props.picture} alt="product" />
-            </a>
+            </Link>
             <p>{props.name}</p>
-            <p className="price">{props.price}</p>
-            <a href="/product/1">ADD TO CART</a>
+            <p className="price">{props.price} €</p>
+            <Link to={"product/" + props.id}>ADD TO CART</Link>
         </Col>
     );
 }

@@ -1,4 +1,10 @@
+.ProductImage {
+    display: flex; /* contexte sur le parent */
+    flex-direction: column; /* direction d'affichage verticale */
+    justify-content: center; /* alignement vertical */
+}
 .ProductImage img {
+    margin: auto;
     max-width: 100%;
     height: auto;
 }

@@ -11,7 +11,7 @@ const item = ( props ) => {
                 {props.quantity}
             </td>
             <td>
-                {props.price}
+                {props.price} $
             </td>
         </tr>
     );

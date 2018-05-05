@@ -1,41 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Products.css';
 import { Row } from 'reactstrap';
 
 import Card from '../Card/Card';
 
-import { BrowserRouter as Router, Route} from "react-router-dom";
+class products extends Component {
+    state = {
+        products:
+        []
+    }
 
-const products = () => {
-    return (
-        <Row>
-            <Card
-                picture = "http://www.newmove.fr/558-large_default/velo-electrique-e-motion-cargo.jpg"
-                name = "VÉLO TOUT BEAU"
-                price = "499,99€"
+    componentDidMount() {
+        const url = 'http://localhost:8000/article/'
+        fetch(url, {
+            method : "GET"
+        })
+        .then(result=> {
+            return result.json();
+            }
+        )
+        .then(data => {
+            this.setState({products: data})
+          }
+        );
+    }
+
+    render() {
+        const cardProducts = this.state.products.map((product, index) => 
+            <Card 
+                key = {index}
+                id = {product.id} 
+                picture = {product.visual}
+                name = {product.name}
+                price = {product.price}
             />
-            <Card
-                picture = "http://www.newmove.fr/558-large_default/velo-electrique-e-motion-cargo.jpg"
-                name = "VÉLO TOUT BEAU"
-                price = "499,99€"
-            />
-            <Card
-                picture = "http://www.newmove.fr/558-large_default/velo-electrique-e-motion-cargo.jpg"
-                name = "VÉLO TOUT BEAU"
-                price = "499,99€"
-            />
-            <Card
-                picture = "http://www.newmove.fr/558-large_default/velo-electrique-e-motion-cargo.jpg"
-                name = "VÉLO TOUT BEAU"
-                price = "499,99€"
-            />
-            <Card
-                picture = "http://www.newmove.fr/558-large_default/velo-electrique-e-motion-cargo.jpg"
-                name = "VÉLO TOUT BEAU"
-                price = "499,99€"
-            />
-        </Row>
-    );
+        );
+
+        return (
+            <Row>
+                {cardProducts}
+            </Row>
+        );
+    }
 }
 
 export default products;

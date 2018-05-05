@@ -20,7 +20,7 @@
 }
 
 .ProductDescription .Description {
-    font-size: 12px;
+    font-size: 14px;
     text-align: justify;
 }
 
@@ -29,10 +29,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .ProductDescription {
-        padding: 50px;
-    }
-
     .ProductDescription .Price, .Name {
         text-align: center;
     }
