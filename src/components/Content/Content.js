@@ -8,6 +8,7 @@ import ProductDetail from '../ProductDetail/ProductDetail';
 import Presentation from '../Presentation/Presentation';
 import Cart from '../Cart/Cart';
 import ProductsByCategory from '../ProductsByCategory/ProductsByCategory';
+import Checkout from '../Checkout/Checkout';
 
 class content extends Component {
     cartHandler = (productIndex, productName, productPrice) => {
@@ -24,6 +25,7 @@ class content extends Component {
                         <Route exact path="/products" render={ () => <Products clicked={this.props.onAddCart} />}/>
                         <Route exact path="/products/:category" component={ ProductsByCategory } clicked={this.props.onAddCart}/>
                         <Route exact path="/cart" render={ () => <Cart data={this.props.data} />}/>
+                        <Route exact path="/checkout" component={ Checkout } />
                     </div>
                 </Router>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Container } from 'reactstrap';
 import List from '../List/List';
+import { Link } from "react-router-dom";
  
 
 const cart = (props) => {
@@ -10,7 +10,12 @@ const cart = (props) => {
             <List
                 cart={props.data}
             />
+
+            <p>Total : 9 498 €</p>
+            <Link to={"/checkout/"}>
+                CHECKOUT
+            </Link>
         </Container>
     );
 };
-export default connect()(cart);
+export default cart;

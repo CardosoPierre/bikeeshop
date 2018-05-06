@@ -11,7 +11,7 @@ class products extends Component {
     }
 
     componentDidMount() {
-        let url = 'http://localhost:8000/article/';
+        const url = 'http://localhost:8000/article/';
         fetch(url, {
             method : "GET"
         })

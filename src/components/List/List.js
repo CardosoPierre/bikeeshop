@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
 
 import { Table } from 'reactstrap';
-import Item from '../Item/Item';
 
 class list extends Component{
     render() {
-        const listItem = this.props.cart.map((product, index) => 
-            <Item
-                name = {product.name}
-                price = {product.price}
-            />
-        );
         return(
             <Table hover>
             <thead>
                 <tr>
                     <th> Name </th>
                     <th> Price </th>
+                    <th> Quantity </th>
                 </tr>
             </thead>
             <tbody>
-                {listItem}
+                <tr>
+                    <td>LAPIERRE AIRCODE SL 900 PINOT ULTIMATE</td>
+                    <td>6999 €</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>CUBE ACCESS HYBRID RACE 500 2018 ELECTRIC</td>
+                    <td>2499 €</td>
+                    <td>1</td>
+                </tr>
             </tbody>
         </Table>
         )
