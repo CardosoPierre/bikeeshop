@@ -22,7 +22,10 @@ class products extends Component {
         .then(data => {
             this.setState({products: data})
           }
-        );
+        )
+        .catch(function() {
+            console.log("Network Error");
+        });
     }
 
     render() {
@@ -33,6 +36,7 @@ class products extends Component {
                 picture = {product.visual}
                 name = {product.name}
                 price = {product.price}
+                click={() => this.props.clicked(product.id, product.name, product.price)}
             />
         );
 

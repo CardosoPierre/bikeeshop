@@ -1,14 +1,16 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 import { Container } from 'reactstrap';
 import List from '../List/List';
+ 
 
-
-const cart = () => {
+const cart = (props) => {
     return(
         <Container className="Cart">
-            <List />
+            <List
+                cart={props.data}
+            />
         </Container>
     );
 };
-export default cart;
+export default connect()(cart);

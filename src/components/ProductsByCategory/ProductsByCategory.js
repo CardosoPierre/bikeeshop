@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import './ProductsByBrand.css';
+import './ProductsByCategory.css';
 import { Row } from 'reactstrap';
 
 import Card from '../Card/Card';
 
-class productsByBrand extends Component {
+class productsByCategory extends Component {
     state = {
         products:
         []
     }
 
     componentDidMount() {
-        console.log(this.props.match.params.brand);
-        const url = 'http://localhost:8000/article/' + this.props.match.params.brand;
+        const url = 'http://localhost:8000/article/' + this.props.match.params.category;
         fetch(url, {
             method : "GET"
         })
@@ -34,6 +33,7 @@ class productsByBrand extends Component {
                 picture = {product.visual}
                 name = {product.name}
                 price = {product.price}
+                click={() => this.props.clicked(product.id)}
             />
         );
 
@@ -45,4 +45,4 @@ class productsByBrand extends Component {
     }
 }
 
-export default productsByBrand;
+export default productsByCategory;

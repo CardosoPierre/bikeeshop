@@ -10,9 +10,7 @@ import { Container, Collapse,
     DropdownToggle,
     DropdownMenu,
     DropdownItem } from 'reactstrap';
-
-    import { BrowserRouter as Router, Link } from "react-router-dom";
-
+    
 class header extends Component {
     constructor(props) {
         super(props);
@@ -56,6 +54,9 @@ class header extends Component {
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
+                            <NavItem>
+                                <NavLink href="/cart">CART</NavLink>
+                            </NavItem>
                         </Nav>
                     </Collapse>
                 </Navbar>
