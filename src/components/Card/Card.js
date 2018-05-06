@@ -7,12 +7,12 @@ const card = (props) => {
 
     return (
         <Col md="4" className="Card">
-            <Link to={"product/" + props.id}>
+            <Link to={"/product/" + props.id}>
                 <img src={props.picture} alt="product" />
             </Link>
-            <p>{props.name}</p>
+            <p className="name">{props.name}</p>
             <p className="price">{props.price} €</p>
-            <Link to={"product/" + props.id}>ADD TO CART</Link>
+            <Link to={"/product/" + props.id}>ADD TO CART</Link>
         </Col>
     );
 }

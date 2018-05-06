@@ -8,7 +8,7 @@ const productDescription = (props) => {
     return (
         <Col md='5' className="ProductDescription">
             <Link to="/products">
-                All Product
+                &#60; All Products
             </Link>
             <p className="Name">{ props.name }</p>
             <p className="Price">{ props.price } €</p>

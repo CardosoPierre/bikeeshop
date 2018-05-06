@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import './Products.css';
+import './ProductsByBrand.css';
 import { Row } from 'reactstrap';
 
 import Card from '../Card/Card';
 
-class products extends Component {
+class productsByBrand extends Component {
     state = {
         products:
         []
     }
 
     componentDidMount() {
-        let url = 'http://localhost:8000/article/';
+        console.log(this.props.match.params.brand);
+        const url = 'http://localhost:8000/article/' + this.props.match.params.brand;
         fetch(url, {
             method : "GET"
         })
@@ -44,4 +45,4 @@ class products extends Component {
     }
 }
 
-export default products;
+export default productsByBrand;
